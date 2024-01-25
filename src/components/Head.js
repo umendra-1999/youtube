@@ -35,6 +35,7 @@ const Head = () => {
   const getSearchSuggestion = async () => {
     const data = await fetch(YOUTUBE_SEARCH_API + searchText);
     const json = await data.json();
+    console.log(json);
 
     setSeggetions(json[1]);
     setShowSuggestions(true);
