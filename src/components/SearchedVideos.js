@@ -2,10 +2,12 @@ import { useState, useEffect } from "react";
 import { GOOGLE_API_KEY, YOUTUBE_SEARCHED_VIDEOS_API } from "../utils/constant";
 import SearchCard from "./SearchCard";
 import { useSearchParams } from "react-router-dom";
+import Shimmer from "./Shimmer";
+import ShimmerContainer from "./ShimmerContainer";
 
 const SearchedVideos = () => {
   const [searchedVideos, setSearchedVideos] = useState([]);
-  const [searchedUrlText, setSearchedUrlText] = useSearchParams();
+  const [searchedUrlText] = useSearchParams();
 
   useEffect(() => {
     searchVideos();
@@ -14,14 +16,9 @@ const SearchedVideos = () => {
   const searchVideos = async () => {
     try {
       const data = await fetch(
-        `https://proxy.cors.sh/${
+        `${
           YOUTUBE_SEARCHED_VIDEOS_API + searchedUrlText
-        } &key= ${GOOGLE_API_KEY}`,
-        {
-          headers: {
-            "x-cors-api-key": "temp_7683d42ba0a2ea33fe7f68a5af58fd5b",
-          },
-        }
+        } &key= ${GOOGLE_API_KEY}`
       );
 
       const json = await data.json();
@@ -30,6 +27,14 @@ const SearchedVideos = () => {
       console.log(error);
     }
   };
+
+  if (searchedVideos.length === 0) {
+    return (
+      <>
+        <ShimmerContainer />
+      </>
+    );
+  }
 
   return (
     <div className="">
