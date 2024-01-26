@@ -4,7 +4,7 @@ import dummyUser from "../assets/profile-user.png";
 const CommentCard = ({ data }) => {
   const { name, text, replies } = data;
   return (
-    <div className="ml-20 flex items-center rounded-lg mt-1 bg-slate-100 p-2">
+    <div className="ml-20 max-sm:ml-3 max-sm:p-2 flex items-center rounded-lg mt-1 bg-slate-100 p-2">
       <img className="w-8 h-8 mr-3 " src={dummyUser} />
       <div>
         <p className="font-bold text-sm">{name}</p>

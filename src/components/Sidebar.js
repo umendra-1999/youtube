@@ -2,10 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import home from "../assets/house-black-silhouette-without-door.png";
 import shorts from "../assets/play-button.png";
-// import history from "../assets/history.png";
-// import user from "../assets/user.png";
 import subscribe from "../assets/subscribe.png";
-// import clock from "../assets/clock.png";
 
 const Sidebar = () => {
   const isMenuOpen = useSelector((store) => store.app.isOpenMenu);

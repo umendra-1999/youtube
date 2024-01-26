@@ -9,13 +9,15 @@ const SearchCard = ({ info }) => {
 
   const { videoId } = info.id;
   return (
-    <>
+    <div className="">
       <Link to={"/watch?v=" + videoId}>
-        <div className=" p-2 my-2 w-3/4 rounded-lg">
-          <div className="flex">
+        <div className=" p-2 my-2 w-3/4 rounded-lg max-sm:w-full">
+          <div className="flex max-sm:flex-col max-sm:justify-center max-sm:items-center ">
             <img className="w-80 rounded-lg" src={thumbnails?.high?.url} />
             <div className="flex-col mx-2 ">
-              <h1 className="font-semibold my-2  text-lg">{title}</h1>
+              <h1 className="font-semibold my-2 text-lg max-sm:line-clamp-2">
+                {title}
+              </h1>
               <div className="flex text-xs">
                 <h1>32M views</h1>
                 <h1 className="mx-4">{publishedAt}</h1>
@@ -30,9 +32,9 @@ const SearchCard = ({ info }) => {
             </div>
           </div>
         </div>
-        <div className="border-b-2 w-3/4"></div>
+        <div className="border-b-2 w-3/4 max-sm:w-full"></div>
       </Link>
-    </>
+    </div>
   );
 };
 

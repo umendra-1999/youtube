@@ -2,12 +2,11 @@ import React, { useEffect, useState } from "react";
 import ChatMessage from "./ChatMessage";
 import { useDispatch, useSelector } from "react-redux";
 import { addMessage } from "../utils/chatSlice";
-import { generateRandomName } from "../utils/helper";
+import { generateEmoji, generateRandomName } from "../utils/helper";
 
 const LiveChat = () => {
   const dispatch = useDispatch();
   const [liveChatMsg, setLiveChatMsg] = useState("");
-  console.log(liveChatMsg);
 
   const chatMessages = useSelector((store) => store.chat.messages);
 
@@ -16,10 +15,9 @@ const LiveChat = () => {
       dispatch(
         addMessage({
           name: generateRandomName(),
-          message: "this sis akash  hunlkah tajnakj",
+          message: "Live chat You can also chat" + generateEmoji(),
         })
       );
-      console.log("API poling");
     }, 500);
     return () => {
       clearInterval(i);
@@ -49,10 +47,10 @@ const LiveChat = () => {
           );
           setLiveChatMsg("");
         }}
-        className="border rounded-lg mt-1 border-black flex justify-between w-[350px] ml-20 active:border-none"
+        className="border rounded-lg mt-1 border-black flex justify-between w-[350px] ml-20 max-sm:ml-4 active:border-none"
       >
         <input
-          className="w-full rounded-lg p-2 max-sm:w-96"
+          className="w-full rounded-lg p-2 max-sm:w-full"
           type="text"
           placeholder="Write a to chat"
           value={liveChatMsg}

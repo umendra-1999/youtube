@@ -178,33 +178,82 @@ export function generateRandomName() {
   return nameList[Math.floor(Math.random() * nameList.length)];
 }
 
+let emoji = [
+  "👶",
+  "😘",
+  "😎",
+  "👨🏻‍🦰",
+  "🧑🏻‍🦰",
+
+  "😍",
+  "🥰",
+  "😗",
+  "😙",
+  "😚",
+  "😋",
+  "😛",
+  "😝",
+  "😜",
+  "🤪",
+  "🤨",
+  "🧐",
+  "🤓",
+  "🥸",
+  "🤩",
+  "👦🏻",
+  "👩🏻",
+  "🧑🏻",
+  "👨🏻",
+  "👩🏻‍🦱",
+  "🧑🏻‍🦱",
+  "👨🏻‍🦱",
+  "👩🏻‍🦰",
+  "👱🏻‍♀️",
+  "👱🏻",
+  "👱🏻‍♂️",
+  "👩🏻‍🦳",
+  "🧑🏻‍🦳",
+  "👨🏻‍🦳",
+  "👩🏻‍🦲",
+  "🧑🏻‍🦲",
+  "👨🏻‍🦲",
+  "🧔🏻‍♀️",
+  "🧔🏻",
+  "🧔🏻‍♂️",
+
+  ,
+];
+export function generateEmoji() {
+  return emoji[Math.floor(Math.random() * emoji.length)];
+}
+
 export const commentMockData = [
   {
     name: "Akash Kumar",
-    text: "Lorem Ipsum is simply  text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard ",
+    text: "Lorem Ipsum is simply  text of the printing and typesetting industry.  ",
     replies: [
       {
         name: "Akash Kumar",
-        text: "Lorem Ipsum is simply  text of the printing and typesetting . Lorem Ipsum has been the industry's standard ",
+        text: "Lorem Ipsum is simply  text of the printing and typesetting .  ",
         replies: [],
       },
     ],
   },
   {
     name: "Akash Kumar",
-    text: "Lorem Ipsum is simply  text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard ",
+    text: "Lorem Ipsum is simply  text of the printing and typesetting industry.  ",
     replies: [
       {
         name: "Akash Kumar",
-        text: "Lorem Ipsum is simply  text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard ",
+        text: "Lorem Ipsum is simply  text of the printing and typesetting industry.  ",
         replies: [
           {
             name: "Akash Kumar",
-            text: "Lorem Ipsum is simply  text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard ",
+            text: "Lorem Ipsum is simply  text of the printing and typesetting industry.  ",
             replies: [
               {
                 name: "Akash Kumar",
-                text: "Lorem Ipsum is simply  text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard ",
+                text: "Lorem Ipsum is simply  text of the printing and typesetting industry.  ",
                 replies: [],
               },
             ],
@@ -215,23 +264,23 @@ export const commentMockData = [
   },
   {
     name: "Akash Kumar",
-    text: "Lorem Ipsum is simply  text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard ",
+    text: "Lorem Ipsum is simply  text of the printing and typesetting industry.  ",
     replies: [
       {
         name: "Akash Kumar",
-        text: "Lorem Ipsum is simply  text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard ",
+        text: "Lorem Ipsum is simply  text of the printing and typesetting industry.  ",
         replies: [],
       },
     ],
   },
   {
     name: "Akash Kumar",
-    text: "Lorem Ipsum is simply  text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard ",
+    text: "Lorem Ipsum is simply  text of the printing and typesetting industry.  ",
     replies: [],
   },
   {
     name: "Akash Kumar",
-    text: "Lorem Ipsum is simply  text of the printing and typesetting typescript. Lorem Ipsum has been the industry's standard ",
+    text: "Lorem Ipsum is simply  text of the printing and typesetting typescript.  ",
     replies: [],
   },
 ];

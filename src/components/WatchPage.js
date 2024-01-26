@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useSearchParams } from "react-router-dom";
 import { closeMenu } from "../utils/appSlice";
@@ -17,7 +17,7 @@ const WatchPage = () => {
       <div>
         <div className="ml-20 my-4 rounded-lg flex justify-center max-sm:flex max-sm:flex-col max-sm:ml-0">
           <iframe
-            className="rounded-lg"
+            className="rounded-lg max-sm:w-full max-sm:h-72"
             width="850"
             height="480"
             src={"https://www.youtube.com/embed/" + Videoid.get("v")}

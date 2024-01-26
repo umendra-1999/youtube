@@ -4,9 +4,9 @@ import { commentMockData } from "../utils/helper";
 
 const CommentList = ({ comments }) => {
   return comments.map((comment, index) => (
-    <div>
-      <CommentCard key={index} data={comment} />
-      <div className="border-l-black border-b-0 pl-5 border ml-5">
+    <div key={index}>
+      <CommentCard data={comment} />
+      <div key={index} className="border-l-black border-b-0 pl-5 border ml-5">
         <CommentList comments={comment.replies} />
       </div>
     </div>

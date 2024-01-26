@@ -1,10 +1,10 @@
-export const GOOGLE_API_KEY = "AIzaSyCm-V78gN0ptQXFV2aeu9cLt62QdzZeq5o";
+export const GOOGLE_API_KEY = "AIzaSyDacxSm7RCMmx_waN7EdZ-4Ix35VBRdfyE";
 export const YOUTUBE_VIDEOS_API =
   "https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=IN&key=" +
   GOOGLE_API_KEY;
 
 export const YOUTUBE_SEARCH_API =
-  "https://corsproxy.io/?http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=";
+  "http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=";
 
 export const YOUTUBE_SEARCHED_VIDEOS_API =
   "https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=";
