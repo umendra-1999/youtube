@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { GOOGLE_API_KEY, YOUTUBE_SEARCHED_VIDEOS_API } from "../utils/constant";
 import SearchCard from "./SearchCard";
 import { useSearchParams } from "react-router-dom";
-import Shimmer from "./Shimmer";
 import ShimmerContainer from "./ShimmerContainer";
 
 const SearchedVideos = () => {

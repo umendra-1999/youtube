@@ -25,20 +25,7 @@ const Head = () => {
   const toggleMenuHandler = () => {
     dispatch(toggleMenu());
   };
-  useEffect(() => {
-    const timer = setTimeout(() => getSearchSuggestion(), 200);
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [searchText]);
 
-  const getSearchSuggestion = async () => {
-    const data = await fetch(YOUTUBE_SEARCH_API + searchText);
-    const json = await data.json();
-
-    setSeggetions(json[1]);
-    setShowSuggestions(true);
-  };
   return (
     <>
       <div className="flex justify-between items-center shadow-lg sticky top-0 bg-slate-100 z-30">
