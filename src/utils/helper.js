@@ -229,7 +229,7 @@ export function generateEmoji() {
 
 export const commentMockData = [
   {
-    name: "Akash Kumar",
+    name: "Umendra",
     text: "Lorem Ipsum is simply  text of the printing and typesetting industry.  ",
     replies: [
       {
@@ -248,11 +248,11 @@ export const commentMockData = [
         text: "Lorem Ipsum is simply  text of the printing and typesetting industry.  ",
         replies: [
           {
-            name: "Akash Kumar",
-            text: "Lorem Ipsum is simply  text of the printing and typesetting industry.  ",
+            name: "shivam",
+            text: " simply  text of the printing and typesetting industry.  ",
             replies: [
               {
-                name: "Akash Kumar",
+                name: "umendra pratap",
                 text: "Lorem Ipsum is simply  text of the printing and typesetting industry.  ",
                 replies: [],
               },
